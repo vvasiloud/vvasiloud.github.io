@@ -1,16 +1,13 @@
 # main links links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Home"
+    url: https://vvasiloud.github.io/
 
   - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/
+    url: https://vvasiloud.github.io/about/
 
-  - title: "Sample Posts"
-    url: https://mmistakes.github.io/minimal-mistakes/year-archive/
+  - title: "Archive"
+    https://vvasiloud.github.io/year-archive/
 
-  - title: "Sample Pages"
-    url: https://mmistakes.github.io/minimal-mistakes/page-archive/
-
-  - title: "Sample Collections"
-    url: https://mmistakes.github.io/minimal-mistakes/collection-archive/
+  - title: "Contact"
+    https://vvasiloud.github.io/contact
