@@ -7,11 +7,11 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Vvasiloud Blog"
+title                    : "vvasiloud.io"
 title_separator          : "-"
 name                     : "vvasiloud"
-description              : "Yet an other blog"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              : "Yet an other dvevelopers blog"
+url                      : https://vvasiloud.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -28,7 +28,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 
 # SEO Related
-google_site_verification :
+google_site_verification : whPGn-8x75cvZcFhwnQ15ClfFo--wBrrSo1i1SNseK0
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -50,9 +50,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : google-universal # false (default), google, "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-79897117-1
 
 # Google AdSense
 google_ad_client         :
@@ -62,25 +62,25 @@ google_ad_slot           :
 # Site Author
 author:
   name             : "vvasiloud"
-  avatar           : "bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  avatar           : "avatar.jpg"
+  bio              : "Web developer"
+  location         : "Thessaloniki, Greece"
   email            :
   uri              :
   bitbucket        :
-  codepen          :
+  codepen          : vvasiloud
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : vvasiloud
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : vvasiloudis
   pinterest        :
-  soundcloud       :
+  soundcloud       : 
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
@@ -144,12 +144,33 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+  
+  # Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Athens
 
 
 # Plugins

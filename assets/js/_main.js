@@ -11,14 +11,15 @@ $(document).ready(function(){
   $(".sticky").Stickyfill();
 
   var stickySideBar = function(){
-    var windowWidth = $(window).width();
-    if (windowWidth > 1024) {
+    if (!$(".author__urls-wrapper button").is(":visible")) {
       // fix
       Stickyfill.rebuild();
       Stickyfill.init();
+      $(".author__urls").show();
     } else {
       // unfix
       Stickyfill.stop();
+      $(".author__urls").hide();
     }
   };
 
@@ -72,5 +73,22 @@ $(document).ready(function(){
     closeOnContentClick: true,
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
+  
+    // Call readReamining
+	if ( $( ".page" ).length ) {
+		$('body').readRemaining({
+		  showGaugeDelay   : 1000,           // Delay before showing the indicator.
+		  showGaugeOnStart : false,          // Show the gauge initially, even before the user scroll.
+		  timeFormat       : '%mm %ss left', // Will replace %m and %s with minutes and seconds.
+		  maxTimeToShow    : 20*60,          // Only show time if is lower than x minutes (multiplied to seconds).
+		  minTimeToShow    : 10,             // Only show time if is higher than x seconds (If it's less than 10 seconds... just read).
+		  gaugeContainer   : '',             // The element where the gauge will append. If left '', the container will be the same scrolling element.
+		  insertPosition   : 'prepend',       // 'append' or 'prepend' as required by style
+		  verboseMode      : false,           // Enable the console logs. For testing only.
+		  gaugeWrapper     : '',             // Optional, the element that define the visible scope for the gauge. If left "", the gauge will be visible all along.
+		  topOffset        : 0,              // Distance between the top of the gaugeWrapper and the point where the gauge will start to appear. Some designs require this.
+		  bottomOffset     : 0               // Distance between bottom border where the box will appear and the bottom of the element.
+		});
+	}
 
 });

@@ -1,13 +1,13 @@
 # main links links
 main:
   - title: "Home"
-    url: https://vvasiloud.github.io/
+    url: /
 
   - title: "About"
-    url: https://vvasiloud.github.io/about/
+    url: /about
 
   - title: "Archive"
-    url: https://vvasiloud.github.io/year-archive/
+    url: /year-archive
 
   - title: "Contact"
-    url: https://vvasiloud.github.io/contact
+    url: /contact
