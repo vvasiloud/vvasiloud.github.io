@@ -19,7 +19,7 @@ As far as now I can tell:
 
   * Templating with <a href="https://shopify.github.io/liquid/" target="blank">Liquid</a> is nice
   * Easy setup in <a href="http://pages.github.com/" target="_blank">Github Pages</a>
-  * By nature it's static generator, no more security worries for the paranoid  O_O ...
+  * By nature it's a static generator, no more security worries for the paranoid  O_O ...
 
 Happy Jekyll blogging!
 
