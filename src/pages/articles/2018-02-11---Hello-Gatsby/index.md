@@ -7,7 +7,7 @@ path: "/posts/moving-to-gatsby"
 category: "Random"
 tags:
   - "gatsby"
-description: "Hello Gatsby, Goodbye Jekyll :/ ..."
+description: "Hello Gatsby, Goodbye Jekyll ..."
 ---
 
 Since I am more confortable writing in Javascript that Ruby decided to move from [Jekyll](https://jekyllrb.com/) to [Gatbsy](https://www.gatsbyjs.org/) for my personal
