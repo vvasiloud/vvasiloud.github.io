@@ -1,0 +1,44 @@
+.page__footer {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 3em;
+  color: #9ba1a6;
+  animation: intro 0.3s both;
+  animation-delay: 0.45s;
+  background-color: #f2f3f3;
+  border-top: 1px solid #bdc1c4;
+
+  & .page__footer-follow {
+
+    & .social-icons {
+      padding: 0;
+      margin: 0;
+
+      & li {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+
+  & .page__footer-copyright {
+    font-size: .6875em;
+  }
+
+  & footer {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    margin-top: 2em;
+    padding: 0 1em 2em;
+  }
+
+}

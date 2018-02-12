@@ -1,0 +1,36 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.links {
+    @include margin-bottom(1);
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 10px -3px;
+        flex-direction: column;
+        &-item {
+            font-size: .9em;
+            line-height: 1.5;
+            color: inherit;
+            & a {
+                border: 0;
+                color: inherit;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+                & i {
+                    font-size: 14px;
+                    color: lighten($color-base, 20%);
+                }
+                &:hover,
+                &:focus {
+                    & i {
+                        color: $color-base;
+                    }
+                }
+            }
+        }
+    }
+}
