@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[vvasiloud.io]]></title><description><![CDATA[vvasiloud.io]]></description><link>http://github.com/dylang/node-rss</link><generator>RSS for Node</generator><lastBuildDate>Tue, 13 Feb 2018 00:41:04 GMT</lastBuildDate><item><title><![CDATA[Moving to Gatsby]]></title><description><![CDATA[Hello Gatsby, Goodbye Jekyll :/ ...]]></description><link>https://vvasiloud.github.io//posts/moving-to-gatsby</link><guid isPermaLink="false">https://vvasiloud.github.io//posts/moving-to-gatsby</guid><pubDate>Sun, 11 Feb 2018 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;Since I am more confortable writing in Javascript that Ruby decided to move from &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; to &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatbsy&lt;/a&gt; for my personal
+blogging.&lt;/p&gt;
+&lt;p&gt;I was kind overwellmed by broken ruby gems and weired errors, so I took the decision for the move. Of course I had to put some
+effort migrating and leaving my favorite theme &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;Minimal Mistakes&lt;/a&gt; in favor of &lt;a href=&quot;https://github.com/alxshelepenok/gatsby-starter-lumen&quot;&gt;Lumen&lt;/a&gt;. With small customizations
+to adjust some parts I loved from the previous theme to it, and in the end I came up with something very similar :P…
+The process was really straightforward and in the meantime I had some introduction to &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; and &lt;a href=&quot;http://graphql.org/&quot;&gt;GraphQL&lt;/a&gt; since
+I have an &lt;a href=&quot;https://angular.io/&quot;&gt;Angular&lt;/a&gt; background. Playing with &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; was easier than I thought!.&lt;/p&gt;
+&lt;p&gt;I am going to miss some great features of &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; but I think I can bear with it.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello Jekyll]]></title><description><![CDATA[Hello Jekyll, Hello World!]]></description><link>https://vvasiloud.github.io//posts/hello-jekyll</link><guid isPermaLink="false">https://vvasiloud.github.io//posts/hello-jekyll</guid><pubDate>Mon, 13 Jun 2016 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;Hello Jekyll, Hello World!
+Decided to give up Wordpress for personal blogging for good giving Jekyll a try here in &lt;a href=&quot;http://pages.github.com/&quot; target=&quot;_blank&quot;&gt;Github Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As far as now I can tell:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Templating with &lt;a href=&quot;https://shopify.github.io/liquid/&quot; target=&quot;blank&quot;&gt;Liquid&lt;/a&gt; is nice&lt;/li&gt;
+&lt;li&gt;Easy setup in &lt;a href=&quot;http://pages.github.com/&quot; target=&quot;_blank&quot;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;By nature it’s a static generator, no more security worries for the paranoid  O_O …&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy Jekyll blogging!&lt;/p&gt;</content:encoded></item></channel></rss>
