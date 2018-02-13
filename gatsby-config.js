@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/vvasiloud.github.io',
   siteMetadata: {
     url: 'https://vvasiloud.github.io/',
     title: 'vvasiloud.io',
