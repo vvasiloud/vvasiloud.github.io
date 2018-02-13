@@ -3,6 +3,8 @@
 <url> <loc>https://vvasiloud.github.io//offline-plugin-app-shell-fallback/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vvasiloud.github.io//posts/moving-to-gatsby</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vvasiloud.github.io//tags/gatsby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vvasiloud.github.io//tags/react/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vvasiloud.github.io//tags/graphql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vvasiloud.github.io//categories/random/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vvasiloud.github.io//posts/hello-jekyll</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vvasiloud.github.io//tags/jekyll/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
