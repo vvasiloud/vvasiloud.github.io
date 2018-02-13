@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{97:function(t,a){t.exports={data:{site:{siteMetadata:{title:"vvasiloud.io",subtitle:"Yet an other developer blog",copyright:"© 2018 vvasiloud.io, All rights reserved.",menu:[{label:"vvasiloud.io",path:"/"},{label:"Home",path:"/"},{label:"Articles",path:"/"},{label:"About me",path:"/about/"},{label:"Contact me",path:"/contact/"}],author:{github:"vvasiloud",rss:"rss.xml"}}}},layoutContext:{}}}});
+//# sourceMappingURL=path----40a082080f019132cdd4.js.map
