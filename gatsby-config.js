@@ -1,197 +1,103 @@
+const urljoin = require("url-join")
+const siteConfig = require("./siteConfig")
+
 module.exports = {
   siteMetadata: {
-    url: 'https://vvasiloud.github.io/',
-    title: 'vvasiloud.io',
-    subtitle: 'Yet an other developer blog',
-    copyright: '© 2018 vvasiloud.io, All rights reserved.',
-    disqusShortname: 'vvasiloudgithubio',
-    menu: [
-      {
-          label: 'vvasiloud.io',
-          path: '/'
-      },
-      {
-          label: 'Home',
-          path: '/'
-      },
-      {
-        label: 'Articles',
-        path: '/'
-      },
-      {
-        label: 'About me',
-        path: '/about/'
-      },
-      {
-        label: 'Contact me',
-        path: '/contact/'
-      }
-    ],
-    author: {
-      name             : "vvasiloud",
-      bio              : "Web developer",
-      location         : "Thessaloniki, Greece",
-      email            : '',
-      uri              : '',
-      bitbucket        : '',
-      codepen          : 'vvasiloud',
-      dribbble         : '',
-      flickr           : '',
-      facebook         : '',
-      foursquare       : '',
-      github           : 'vvasiloud',
-      google_plus      : '',
-      keybase          : '',
-      instagram        : '',
-      lastfm           : '',
-      linkedin         : 'vvasiloudis',
-      pinterest        : '',
-      soundcloud       : '',
-      stackoverflow    : '',
-      steam            : '',
-      tumblr           : '',
-      twitter          : '',
-      vine             : '',
-      weibo            : '',
-      xing             : '',
-      youtube          : '',
-      telegram         : '',
-      rss              : 'feed.xml',
-      vk               : ''
-    }
+    title: siteConfig.name,
+    author: siteConfig.author,
+    description: siteConfig.description,
+    siteUrl: urljoin(siteConfig.url, siteConfig.prefix),
+    social: {
+      twitter: siteConfig.twitter,
+    },
   },
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                url
-                title
-                subtitle
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => (
-              allMarkdownRemark.edges.map(edge =>
-                Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.url + edge.node.fields.slug,
-                  guid: site.siteMetadata.url + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
-                }))
-            ),
-            query: `
-              {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
-                ) {
-                  edges {
-                    node {
-                      html
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        layout
-                        draft
-                        description
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml'
-          }
-        ]
-      }
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 960
-            }
+              maxWidth: 1360,
+              withWebp: true,
+              showCaptions: true,
+              quality: 75,
+              wrapperStyle: `margin: 7vw 0;`,
+            },
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants'
-        ]
-      }
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-79897117-1' }
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        fonts: [`roboto\:400,400i,500,700`]
-      }
+        postCssPlugins: [
+          require("postcss-easy-import")(),
+          require("postcss-custom-properties")({ preserve: false }),
+          require("postcss-color-function")(),
+          require("autoprefixer")({ browsers: ["last 2 versions"] }),
+        ],
+      },
     },
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: `gatsby-plugin-purgecss`,
       options: {
-        query: `
-            {
-              site {
-                siteMetadata {
-                  url
-                }
-              }
-              allSitePage(
-                filter: {
-                  path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
-                }
-              ) {
-                edges {
-                  node {
-                    path
-                  }
-                }
-              }
-          }`,
-        output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            return {
-              url: site.siteMetadata.url + edge.node.path,
-              changefreq: 'daily',
-              priority: 0.7
-            };
-          })
-      }
+        printRejected: true, // Print removed selectors and processed file names
+        // develop: true, // Enable while using `gatsby develop`
+        // tailwind: true, // Enable tailwindcss support
+        // whitelist: ['whitelist'], // Don't remove this selector
+        // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
+        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
+      },
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss-sass'
-  ]
-};
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // TODO: replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: 'UA-XXXXXXXXX-X',
+      },
+    },
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: siteConfig.name,
+        short_name: siteConfig.shortName,
+        start_url: siteConfig.prefix,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/gatsby-icon.png`,
+      },
+    },
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+  ],
+}
