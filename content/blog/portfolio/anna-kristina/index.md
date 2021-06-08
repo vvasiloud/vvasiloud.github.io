@@ -1,8 +1,8 @@
 ---
-title: Darkness
-date: "2019-05-08"
-thumbnail: ./bbbb.jpg
-description: Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
+title: Anna-Kristina.net
+date: "2021-05-22"
+thumbnail: ./anna-kristina-net.jpg
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
 ### A wallpaper series using shapes and light by [Jean-Marc Denis](http://jmd.im/black)

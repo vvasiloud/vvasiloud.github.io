@@ -7,9 +7,8 @@ import PostCard from "../components/postCard"
 
 import Typewriter from 'typewriter-effect';
 
-// import "../utils/global.scss"
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
+import './index.scss';
+
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
@@ -41,9 +40,9 @@ const BlogIndex = ({ data }, location) => {
             </h2>
         </header>
       )}
-        <section>
+        <section className="container-fluid">
           <h2 className="text-center">My Recent Works</h2>
-          <div className="post-feed">
+          <div className="row post-feed">
             {posts.map(({ node }) => {
               postCounter++
               return (
@@ -51,55 +50,82 @@ const BlogIndex = ({ data }, location) => {
                   key={node.fields.slug}
                   count={postCounter}
                   node={node}
-                  postClass={`post`}
+                  postClass={`col-xs-12 col-sm-4 post`}
                 />
               )
             })}
           </div>
         </section>
-        <section>
-             <div className="row">
-                 <div className="col-12">
-                     <h2> About Me</h2>
-                     <h3>
-                         I am <Typewriter className="inline"
-                                          options={{
-                                              strings: ['a web developer', 'mother of dragons', 'build breaker', 'full stack octopus'],
-                                              autoStart: true,
-                                              loop: true,
-                                          }}
-                                          onInit={(typewriter) => {
-                                              console.log('String typed out!');
-                                          }}
-                     />
-                     </h3>
-                 </div>
-
-                 <div className="col-6">
-                     A passionate Full Stack Web Developer and Mobile App Developer having an experience of building Web applications
-                     with JavaScript / Reactjs / Nodejs / Python / Django / Flask and some other cool libraries and frameworks and Cross Platform Mobile Apps With Flutter.
-                     [social-icon]
-                     [see my resume here]
-                 </div>
-                 <div className="col-6">
-                     Tech stack
-                 </div>
-             </div>
+      <section>
+        <div className="container text-center">
+          <h2>Services</h2>
+          <div className="row">
+            <div className="col-xs-12 col-sm-4">
+              <h4>Design & Development</h4>
+              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-4">
+              <h4>E-Commerce</h4>
+              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-4">
+              <h4>Mobile apps</h4>
+              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </p>
+            </div>
+            <div className="col-xs-12">
+              <button className="btn btn-outline-info">See all</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+          <div className="container text-center">
+            <h2> About Me</h2>
+            <div className="row">
+                   <div className="col-xs-12 col-sm-6 text-justify about-typewriter">
+                     <h4>
+                       I am <Typewriter options={{
+                                          strings: ['a web developer', 'a full stack octopus', 'the breaker of the builds', 'the mother of dragons',  'the lord of the sevenths', '... (are you still reading??)'],
+                                          autoStart: true,
+                                          loop: true,
+                                        }}
+                                        onInit={(typewriter) => {
+                                          console.log('String typed out!');
+                                        }}/>
+                     </h4>
+                     <p>A passionate Full Stack Web Developer helping people bring their ideas to life.
+                       with JavaScript / Reactjs / Nodejs / Python / Django / Flask and some other cool libraries and frameworks and Cross Platform Mobile Apps With Flutter.
+                       </p>
+                     <p>Got any questions? <a href="#">Contact me.</a></p>
+                       [social-icon]
+                       [see my resume here]
+                   </div>
+              <div className="col-xs-12 col-sm-6">
+                       Tech stack [make-it-rain]
+                <i className="icon icon-lg icon-shape shadow rounded-circle mb-5 fab fa-angular"></i>
+                </div>
+            </div>
+          </div>
         </section>
         <section>
+          <div className="container">
+            <h2 className="text-center">Let's talk about your next</h2>
             <div className="row">
-                <div className="col-12"><h2>Services</h2></div>
             </div>
+          </div>
         </section>
         <section>
+          <div className="container">
+            <h2 className="text-center">Contact</h2>
             <div className="row">
-                <div className="col-12"><h2>Let's talk about your next</h2></div>
             </div>
-        </section>
-        <section>
-            <div className="row">
-                <div className="col-12"><h2>Contact</h2></div>
-            </div>
+          </div>
         </section>
     </Layout>
   )
