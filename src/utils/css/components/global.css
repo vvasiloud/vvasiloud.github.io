@@ -412,8 +412,8 @@ h6 {
 }
 
 .icon-lg {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
 }
 
 .icon-shape {
@@ -423,4 +423,69 @@ h6 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+}
+
+.section-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-container-fluid {
+    padding: 50px 3vw;
+}
+
+.gatsby-resp-image-image {
+    box-shadow: none !important;
+}
+
+.portfolio-preview-container {
+    position: relative;
+}
+.desktop-view .portfolio-image-container {
+    max-width: 72.3%;
+    margin: 2.2% auto;
+}
+.mobile-view .portfolio-image-container {
+    max-width: 88%;
+    margin-top: 15.5%;
+}
+.desktop-view {
+    filter: drop-shadow(-4px 12px 24px rgba(0, 0, 0, 0.2));
+}
+.mobile-view {
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+    filter: drop-shadow(-4px 12px 24px rgba(0, 0, 0, 0.2));
+}
+
+.desktop-view .portfolio-image-container > img {
+    border-radius: .33rem;
+}
+
+.mobile-view .portfolio-image-container > img {
+    border-radius: 0 0 3rem 3rem;
+}
+
+.transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.translate-x-50 {
+    --tw-translate-x: -50%
+}
+
+.inverted {
+    background-color: #efefef;
+}
+
+.site-head-left ul li:last-child {
+    border-left: 1px solid var(--color-border);
 }

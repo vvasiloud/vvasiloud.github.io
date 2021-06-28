@@ -108,3 +108,12 @@ button.primary:hover,
 .button.primary:hover {
         background-color: color(var(--color-primary) l(-10%));
     }
+
+.btn-contact {
+    background-color: transparent;
+    padding: 1.25rem 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+}

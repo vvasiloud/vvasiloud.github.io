@@ -7,45 +7,46 @@ import SEO from "../components/seo"
 
 const AboutPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
+  const social = data.site.siteMetadata.social
 
   return (
-    <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+    <Layout title={siteTitle} social={social}>
+      <SEO title="About" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
-      <article className="post-content page-template no-image">
-        <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Clean, minimal, and deeply customisable. London is a theme made for
-            people who appreciate simple lines.
-          </h2>
-          <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.benchAccounting.childImageSharp.fluid}
-              className="kg-image"
-            />
-            <figcaption>Large imagery is at the heart of this theme</figcaption>
-          </figure>
-          <h3 id="dynamic-styles">Dynamic styles</h3>
-          <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
-          </p>
-          <p>
-            Both post and page templates are light and minimal, with all the
-            focus on the content while the design of the theme gets out of the
-            way. Beneath the hood, London enjoys the full power of the{" "}
-            <a href="https://docs.ghost.org/api/handlebars-themes/">
-              Ghost Handlebars Theme API
-            </a>{" "}
-            to provide limitless customisation options and dynamic styles.
-          </p>
-          <p>
-            Don't forget to check out the{" "}
-            <a href="https://docs.ghost.org/integrations/">
-              Ghost Integrations Directory
-            </a>{" "}
-            for more ways to integrate Ghost with your favourite services.
-          </p>
+      <div className="post-content pb-0">
+        <header className="post-content-header">
+          <h1 className="post-content-title">/about/me</h1>
+        </header>
+        <p className="post-content-excerpt">test</p>
+      </div>
+
+      <article className="container post-content-body">
+        <figure className="kg-card kg-image-card m-0">
+          <Img
+            fluid={data.benchAccounting.childImageSharp.fluid}
+            className="kg-image"
+          />
+          <figcaption>Well that's me... maybe several years ago</figcaption>
+        </figure>
+        <div className="row justify-content-center">
+          <div className="col-xs-12 col-lg-8">
+              <h3>Hi, my name is Vasilis. Nice to meet you.</h3>
+              <p>I’m a software engineer from Greece.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia suscipit ex, vitae scelerisque erat rutrum id. Morbi tortor nisl, rutrum ut accumsan nec,</p>
+
+                <p>sodales quis nisl. Pellentesque eros tellus, vestibulum quis nisi tristique, commodo ultricies enim. Suspendisse at dolor tempus, hendrerit lorem ac, aliquet quam. Nam ac</p>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia suscipit ex, vitae scelerisque erat rutrum id. Morbi tortor nisl, rutrum ut accumsan nec,</p>
+
+                    <p>sodales quis nisl. Pellentesque eros tellus, vestibulum quis nisi tristique, commodo ultricies enim. Suspendisse at dolor tempus, hendrerit lorem ac, aliquet quam. Nam ac</p>
+
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia suscipit ex, vitae scelerisque erat rutrum id. Morbi tortor nisl, rutrum ut accumsan nec,</p>
+
+                        <p>sodales quis nisl. Pellentesque eros tellus, vestibulum quis nisi tristique, commodo ultricies enim. Suspendisse at dolor tempus, hendrerit lorem ac, aliquet quam. Nam ac</p>
+
+                          <p>Find me online @vvasiloud.</p>
+            </div>
         </div>
       </article>
     </Layout>
@@ -57,13 +58,17 @@ const indexQuery = graphql`
     site {
       siteMetadata {
         title
+        social {
+          github
+          linkedIn
+        }
       }
     }
     benchAccounting: file(
-      relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
+      relativePath: { eq: "about-me.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1360) {
+        fluid(maxWidth: 1360, quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }

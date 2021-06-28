@@ -51,12 +51,16 @@ body {
 /* ---------------------------------------------------------- */
 
 .site-wrapper {
+    /*
     padding: 3vw;
+    */
     min-height: 100vh;
 }
 @media (max-width: 850px) {
     .site-wrapper {
+        /*
         padding: 6vw;
+        */
     }
 }
 
@@ -400,7 +404,7 @@ body {
     flex: 1 1 50%;
     display: flex;
     position: relative;
-    height: 35vw;
+    height: 30vw;
     background: linear-gradient(135deg, #1f1f1f 0%, #111 100%) center center;
     background-size: cover;
     overflow: hidden;
@@ -723,4 +727,20 @@ body {
 
 .bg-grey {
     background-color: #f5f5f5 !important;
+}
+
+
+
+.site-head{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: calc(3vw - 10px);
+
+}
+@media (max-width: 850px) {
+    .site-head {
+        margin-left: 6vw;
+        margin-right: 6vw;
+        margin-top: 6vw;
+    }
 }

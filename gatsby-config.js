@@ -9,6 +9,8 @@ module.exports = {
     siteUrl: urljoin(siteConfig.url, siteConfig.prefix),
     social: {
       twitter: siteConfig.twitter,
+      linkedIn: siteConfig.linkedIn,
+      github: siteConfig.github,
     },
   },
   plugins: [

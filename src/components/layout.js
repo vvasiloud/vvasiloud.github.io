@@ -1,9 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 const Layout = props => {
-  const { title, children } = props
+  const { title, children , social} = props
   const [toggleNav, setToggleNav] = React.useState(false)
+
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
@@ -33,13 +34,10 @@ const Layout = props => {
                 <Link to={`/about`}>About</Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Services</Link>
+                <Link to={`/services`}>Services</Link>
               </li>
               <li className="nav-elements" role="menuitem">
                 <Link to={`/contact`}>Contact</Link>
-              </li>
-              <li className="nav-elements" role="menuitem">
-                |
               </li>
               <li className="nav-elements" role="menuitem">
                 <Link to={`/blog`}>Blog</Link>
@@ -54,7 +52,7 @@ const Layout = props => {
           <div className="site-head-right">
             <div className="social-links">
               <a
-                href="https://www.github.com"
+                href={social.github}
                 title="Github"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,7 +60,7 @@ const Layout = props => {
                 Github
               </a>
               <a
-                href="https://linkedin.com"
+                href={social.linkedIn}
                 title="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
