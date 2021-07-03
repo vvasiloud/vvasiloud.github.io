@@ -442,8 +442,8 @@ h6 {
     position: relative;
 }
 .desktop-view .portfolio-image-container {
-    max-width: 72.3%;
-    margin: 2.2% auto;
+    max-width: 78.8%;
+    margin: 2.5% auto;
 }
 .mobile-view .portfolio-image-container {
     max-width: 88%;
@@ -453,7 +453,6 @@ h6 {
     filter: drop-shadow(-4px 12px 24px rgba(0, 0, 0, 0.2));
 }
 .mobile-view {
-    position: absolute;
     right: 0;
     bottom: -10%;
     filter: drop-shadow(-4px 12px 24px rgba(0, 0, 0, 0.2));

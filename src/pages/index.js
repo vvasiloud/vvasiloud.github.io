@@ -47,26 +47,34 @@ const BlogIndex = ({ data }, location) => {
         <h2 className="text-center">My Recent Works</h2>
 
         <div className="row">
-          <Link to={`/portfolio/anna-kristina/`}>
-            <div className="portfolio-preview-container">
-              <div className="desktop-view d-none d-sm-block">
-                <picture>
-                  <img src="/static/d7a391f647e031a19a043a63d20504f7/73f08/laptop-frame.png"/>
-                </picture>
-                <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100">
-                  <img src="/static/f59ec654a3fdd99e05a5f6861caaa8ab/6050d/annakristina-desktop.png"/>
+          {posts.map(({ node }) => {
+            return (
+              <Link to={`/portfolio/anna-kristina/`}>
+                <div className="portfolio-preview-container">
+                  <div className="desktop-view">
+                    <picture>
+                      <Img fluid={data.laptopFrame.childImageSharp.fluid}/>
+                    </picture>
+                    <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100">
+                      <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid}/>
+                    </div>
+                  </div>
+                  <div className="mobile-view position-absolute col-xs-12 col-sm-3">
+                    <picture>
+                      <Img fluid={data.mobileFrame.childImageSharp.fluid}
+                           imgStyle={{ objectFit: 'contain' }}/>
+                    </picture>
+                    <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100 mx-auto">
+                      <Img fluid={node.frontmatter.mobileThumbnail.childImageSharp.fluid}
+                           style={{ borderRadius: '0 0 3rem 3rem' }}
+                           imgStyle={{ objectFit: 'contain' }}/>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="mobile-view">
-                <picture>
-                  <img src="/static/8b35d56d9110a50f22ab837690964c47/57fc3/mobile-frame.png"/>
-                </picture>
-                <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100 mx-auto">
-                  <img src="/static/2e9c776dc77c3b59297247f56e8b9322/3cde2/annakristina-mobile.png"/>
-                </div>
-              </div>
-            </div>
-          </Link>
+              </Link>
+            )
+          })}
+
         </div>
 
       </section>
@@ -101,7 +109,7 @@ const BlogIndex = ({ data }, location) => {
       <section className="container section-container">
         <div className="row">
           <div className="col-xs-12 col-sm-6 "><h2> About Me</h2></div>
-          <div className="col-xs-12 col-sm-6 text-center"><h4>Tech stack</h4></div>
+          <div className="col-xs-12 col-sm-6 text-center"><h4>Technologies</h4></div>
         </div>
         <div className="row">
           <div className="col-xs-12 col-sm-6 text-justify about-typewriter">
@@ -210,6 +218,13 @@ const indexQuery = graphql`
             title
             description
             thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 1360, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            mobileThumbnail {
               childImageSharp {
                 fluid(maxWidth: 1360, quality: 90) {
                   ...GatsbyImageSharpFluid

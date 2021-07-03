@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from 'gatsby';
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 
 class PortfolioPostTemplate extends React.Component {
   render() {
+    const data = this.props.data;
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const social = this.props.data.site.siteMetadata.social
@@ -31,26 +32,29 @@ class PortfolioPostTemplate extends React.Component {
           </div>
 
           {post.frontmatter.thumbnail && (
-            <div className="portfolio-preview-container text-center">
-              <div className="desktop-view d-none d-sm-block">
+            <div className="portfolio-preview-container">
+              <div className="desktop-view">
                 <picture>
-                  <img src="/static/d7a391f647e031a19a043a63d20504f7/73f08/laptop-frame.png"/>
+                  <Img fluid={data.laptopFrame.childImageSharp.fluid}/>
                 </picture>
                 <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100">
-                  <img src="/static/f59ec654a3fdd99e05a5f6861caaa8ab/6050d/annakristina-desktop.png"/>
+                  <Img fluid={post.frontmatter.thumbnail.childImageSharp.fluid}/>
                 </div>
+              </div>
+              <div className="mobile-view position-absolute col-xs-12 col-sm-3">
+                <picture>
+                  <Img fluid={data.mobileFrame.childImageSharp.fluid}
+                       imgStyle={{ objectFit: 'contain' }}/>
+                </picture>
+                <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100 mx-auto">
+                  <Img fluid={post.frontmatter.mobileThumbnail.childImageSharp.fluid}
+                       imgStyle={{ objectFit: 'contain' }}/>
                 </div>
-                <div className="mobile-view">
-                  <picture>
-                    <img src="/static/8b35d56d9110a50f22ab837690964c47/57fc3/mobile-frame.png"/>
-                  </picture>
-
-                  <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100 mx-auto">
-                    <img src="/static/2e9c776dc77c3b59297247f56e8b9322/3cde2/annakristina-mobile.png"/>
-                  </div>
               </div>
             </div>
           )}
+          [Visit the website](https://www.annakristina.net/)
+
 
           <div
             className="post-content-body"
@@ -83,6 +87,24 @@ export const pageQuery = graphql`
         }
       }
     }
+    laptopFrame: file(
+      relativePath: { eq: "laptop-frame.png" }
+    ) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mobileFrame: file(
+      relativePath: { eq: "mobile-frame.png" }
+    ) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
@@ -93,7 +115,14 @@ export const pageQuery = graphql`
         description
         thumbnail {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(maxWidth: 1360, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        mobileThumbnail {
+          childImageSharp {
+            fluid(maxWidth: 1360, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }

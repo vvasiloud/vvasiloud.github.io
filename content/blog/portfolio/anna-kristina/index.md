@@ -2,10 +2,10 @@
 title: Kristina Annamukhamedova
 date: "2021-05-22"
 thumbnail: ./annakristina-desktop.png
+mobileThumbnail: ./annakristina-mobile.png
+websiteUrl: https://www.annakristina.net/
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
-[Visit the website](https://www.annakristina.net/)
-
 
 ### Usecase
 
