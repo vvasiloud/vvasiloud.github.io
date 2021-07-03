@@ -4,18 +4,23 @@ date: "2021-05-22"
 thumbnail: ./annakristina-desktop.png
 mobileThumbnail: ./annakristina-mobile.png
 websiteUrl: https://www.annakristina.net/
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+description: Website of the award-winning Lithuanian pianist Kristina Annamukhamedova
 ---
 
-### Usecase
+### About Kristina
 
-Website redesign
+Kristina Annamukhamedova is an award-winning Lithuanian pianist performing as a solo and chamber musician across Europe and the United States.
+
+#### The usecase
+
+A complete website redesign of the existing website, providing dynamic content, concert/event calendar, audio player and personalized questionnaire on contact forms for piano lesson requests.
 
 
 #### What was done
-* Customized design
-* CMS integration / admin panel
-* SEO Optimisation
+* Custom web design
+* Mobile-friendly layout
+* Integration with content management system (CMS) with administration panel
+* Search Engine Optimisation (SEO)
 
 #### Technologies used
 <div class="col-xs-12">

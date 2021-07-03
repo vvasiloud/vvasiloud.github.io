@@ -48,16 +48,18 @@ class PortfolioPostTemplate extends React.Component {
                 </picture>
                 <div className="portfolio-image-container position-absolute top-0 start-50 transform translate-x-50 w-100 h-100 mx-auto">
                   <Img fluid={post.frontmatter.mobileThumbnail.childImageSharp.fluid}
+                       style={{ borderRadius: '0 0 3rem 3rem' }}
                        imgStyle={{ objectFit: 'contain' }}/>
                 </div>
               </div>
             </div>
           )}
-          [Visit the website](https://www.annakristina.net/)
-
+          <div className="row text-center">
+            <a href={post.frontmatter.websiteUrl} target="_blank" style={{ zIndex: '9999' }}>Visit the website</a>
+          </div>
 
           <div
-            className="post-content-body"
+            className="post-content-body col-xs-12 col-sm-7 mx-auto"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
 
@@ -113,6 +115,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        websiteUrl
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 1360, quality: 90) {
