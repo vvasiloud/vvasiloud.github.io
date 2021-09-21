@@ -25,7 +25,7 @@ const BlogIndex = ({ data }, location) => {
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
-        <header className="page-head">
+        <header className="page-head sticky-top">
             <p>Hi, I am Vasilis</p>
             <h2 className="page-head-title">
                 <Typewriter
@@ -85,15 +85,12 @@ const BlogIndex = ({ data }, location) => {
 
           <div className="col-xs-12 col-sm-4">
               <h4>Website design & development</h4>
-              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </p>
+              <p className="text-justify">Needing a static or a dynamic site? I can come up with design that specially suits your needs, mobile friendly and optimized for search engines.</p>
             </div>
             <div className="col-xs-12 col-sm-4">
               <h4>E-Commerce</h4>
-              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </p>
+              <p className="text-justify">Starting up a new business or having an existing one?
+                I can help scale your business, import your product catalogue, integrate third party services, payment gateways and design your storefront.</p>
             </div>
             <div className="col-xs-12 col-sm-4">
               <h4>Mobile apps</h4>

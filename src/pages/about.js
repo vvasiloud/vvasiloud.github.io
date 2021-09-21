@@ -17,11 +17,11 @@ const AboutPage = ({ data }, location) => {
         <header className="post-content-header">
           <h1 className="post-content-title">/about/me</h1>
         </header>
-        <p className="post-content-excerpt">test</p>
+        <p className="post-content-excerpt">aka. giving a few seconds to speak about yourself.</p>
       </div>
 
       <article className="container post-content-body">
-        <figure className="kg-card kg-image-card m-0">
+        <figure className="kg-card kg-image-card m-0 rounded">
           <Img
             fluid={data.benchAccounting.childImageSharp.fluid}
             className="kg-image"
@@ -31,21 +31,18 @@ const AboutPage = ({ data }, location) => {
         <div className="row justify-content-center">
           <div className="col-xs-12 col-lg-8">
               <h3>Hi, my name is Vasilis. Nice to meet you.</h3>
+
               <p>I’m a software engineer from Greece.</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia suscipit ex, vitae scelerisque erat rutrum id. Morbi tortor nisl, rutrum ut accumsan nec,</p>
+              <p>I’ve been working since several years ago, and have always taken a deep interest in making websites the best they can be for everyone using them.</p>
 
-                <p>sodales quis nisl. Pellentesque eros tellus, vestibulum quis nisi tristique, commodo ultricies enim. Suspendisse at dolor tempus, hendrerit lorem ac, aliquet quam. Nam ac</p>
+              <p>I value great user interaction and aim to develop smooth user experiences as possible.</p>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia suscipit ex, vitae scelerisque erat rutrum id. Morbi tortor nisl, rutrum ut accumsan nec,</p>
+              <p>As of my story up to now, I had the opportunity and priviledge to work for an amazing <a href="#" target="_blank">design agency</a>, the largest <a href="#" target="_blank">particle physics laboratory</a> in the world and an <a href="#" target="_blank">innovative digital bank</a>.</p>
 
-                    <p>sodales quis nisl. Pellentesque eros tellus, vestibulum quis nisi tristique, commodo ultricies enim. Suspendisse at dolor tempus, hendrerit lorem ac, aliquet quam. Nam ac</p>
+              <p>When I'm not working I love to travel, drinking anti-murder juice (coffee), playing piano and doodling around with new ideas.</p>
 
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia suscipit ex, vitae scelerisque erat rutrum id. Morbi tortor nisl, rutrum ut accumsan nec,</p>
-
-                        <p>sodales quis nisl. Pellentesque eros tellus, vestibulum quis nisi tristique, commodo ultricies enim. Suspendisse at dolor tempus, hendrerit lorem ac, aliquet quam. Nam ac</p>
-
-                          <p>Find me online @vvasiloud.</p>
+              <p>Find me online <a href="https://github.com/vvasiloud" target="_blank">@vvasiloud</a>.</p>
             </div>
         </div>
       </article>
