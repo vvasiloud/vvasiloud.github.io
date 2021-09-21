@@ -94,8 +94,7 @@ const BlogIndex = ({ data }, location) => {
             </div>
             <div className="col-xs-12 col-sm-4">
               <h4>Mobile apps</h4>
-              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              <p className="text-justify">Mobiles applications have gone beyond being just a trend to a almost a necessity. Let me know what are your needs and I can build one for either Android or IOS using cross platform technologies like Flutter.
               </p>
             </div>
           </div>
@@ -110,8 +109,8 @@ const BlogIndex = ({ data }, location) => {
         </div>
         <div className="row">
           <div className="col-xs-12 col-sm-6 text-justify about-typewriter">
-            <p>A passionate Full Stack Web Developer bringing ideas to life with code.
-              with JavaScript / Reactjs / Nodejs / Python / Django / Flask and some other cool libraries and frameworks and Cross Platform Mobile Apps With Flutter.
+            <p>A passionate software enginner bringing ideas to life with code and coffee. I mostly focus on developing for web and mobile.
+              A few technologies I have been working lately are JavaScript (ES6+) / Angular / Gatsby / Wordpress / Flutter.
             </p>
             <p>Got any questions? <Link to={"/contact"}>Contact me.</Link></p>
           </div>

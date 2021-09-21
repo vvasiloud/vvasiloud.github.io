@@ -36,14 +36,12 @@ const ServicesPage = ({ data }, location) => {
             </div>
             <div className="col-xs-12 col-sm-6">
               <h4>Mobile applications</h4>
-              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              <p className="text-justify">Mobiles applications have gone beyond being just a trend to a almost a necessity. Let me know what are your needs and I can build one for either Android or IOS using cross platform technologies like Flutter.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6">
               <h4>Ongoing Support</h4>
-              <p className="text-justify">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              <p className="text-justify">Either having an existing website or needing a new one, consulting and maintenance or generally support can be essential.
               </p>
             </div>
           </div>
