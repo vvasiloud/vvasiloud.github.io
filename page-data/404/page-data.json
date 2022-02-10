@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-404-js","path":"/404/","result":{"data":{"site":{"siteMetadata":{"title":"vvasiloud.io","social":{"github":"https://github.com/vvasiloud","linkedIn":"https://www.linkedin.com/in/vvasiloudis"}}}},"pageContext":{}},"staticQueryHashes":["63159454"]}
+{
+    "componentChunkName": "component---src-pages-404-js",
+    "path": "/404/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"vvasiloud.io","social":{"github":"https://github.com/vvasiloud","linkedIn":"https://www.linkedin.com/in/vvasiloudis"}}}},"pageContext":{}},
+    "staticQueryHashes": ["63159454"]}
