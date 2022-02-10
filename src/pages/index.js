@@ -35,9 +35,7 @@ const BlogIndex = ({ data }, location) => {
                     autoStart: true,
                     loop: true,
                 }}
-                onInit={(typewriter) => {
-                    console.log('String typed out!');
-                }}
+                onInit={(typewriter) => {}}
                 />
             </h2>
         </header>
@@ -49,7 +47,7 @@ const BlogIndex = ({ data }, location) => {
         <div className="row">
           {posts.map(({ node }) => {
             return (
-              <Link to={`/portfolio/anna-kristina/`}>
+              <Link key={node.fields.slug} to={`/portfolio/anna-kristina/`}>
                 <div className="portfolio-preview-container">
                   <div className="desktop-view">
                     <picture>
